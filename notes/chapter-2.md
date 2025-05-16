@@ -28,3 +28,22 @@ read_line() takes a mutable reference to a string and appends the value the user
 
 read_line() returns a `Result` which is an enum which can take the variants - `Ok` & `Err`
 if the result is Err, expect will make your code crash, which is not proper error handling, but baby steps.
+
+
+okay let's improve this code
+`use rand::Rng;`
+`let secret_number = rand::thread_rng().gen_range(1..=100);`
+
+this is to generate a random number.
+
+Rng from rand lets us use gen_range() function. 
+**The dot operator in rust does not work the same way as in JS/TS*
+
+we call thread_rng() from rand which is a random number generator and uses the dot operator to pass the value to gen_range which spits out a value in between 1-100 inclusive of both.
+
+```
+side note: the rust compiler is amazing. it gives me the exact error and what to do to fix that??
+
+some of the functions are deprecated, like thread_rng(), gen_range, other functions are now being used, but the compiler gave me the correct ones and that has been updated to the code.
+```
+

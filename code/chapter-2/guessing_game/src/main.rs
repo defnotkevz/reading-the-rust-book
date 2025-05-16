@@ -1,4 +1,5 @@
 use std::io; // it is a crate
+use rand::Rng;
 
 //yo, i'm a comment.
 /* I am also
@@ -7,9 +8,11 @@ use std::io; // it is a crate
 fn main() {
     println!("Guess the number");
 
-    println!("Please input your guess:");
+    let mut guess = String::new(); 
 
-    let mut guess = String::new();
+    let _secret_number = rand::rng().random_range(1..=100);
+
+    println!("Please input your guess:");
 
     io::stdin()
             .read_line(&mut guess)
