@@ -45,5 +45,28 @@ we call thread_rng() from rand which is a random number generator and uses the d
 side note: the rust compiler is amazing. it gives me the exact error and what to do to fix that??
 
 some of the functions are deprecated, like thread_rng(), gen_range, other functions are now being used, but the compiler gave me the correct ones and that has been updated to the code.
+
+and unused variables can be preceded with an _underscore
 ```
+
+
+`use std::cmp::Ordering;`
+```rust
+match guess.cmp(&secret_number) 
+{ Ordering::Less => println!("Too small!"), 
+  Ordering::Greater => println!("Too big!"), 
+  Ordering::Equal => println!("You win!"), }
+```
+
+let's see, new import: different module, but the same crate.
+
+match -> used as comparison operator? with type checking in-built
+
+.cmp() is returning an Ordering which can be any of the three values.
+
+`Ordering` is an enum with three variants. Like `Result` has two variants.
+
+**question: I imported the Ordering module specifically, and not cmp. but i have use .cmp() in the code. how?**
+
+**question: why is each function taking the reference of the values and the actual owned value?**
 
