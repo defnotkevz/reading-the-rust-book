@@ -60,11 +60,11 @@ match guess.cmp(&secret_number)
 
 let's see, new import: different module, but the same crate.
 
-match -> used as comparison operator? with type checking in-built
-
 .cmp() is returning an Ordering which can be any of the three values.
 
 `Ordering` is an enum with three variants. Like `Result` has two variants.
+
+now `match` is used like a switch case to decide what to do next
 
 **question: I imported the Ordering module specifically, and not cmp. but i have use .cmp() in the code. how?**
 
